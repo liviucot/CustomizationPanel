@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <style type="text/css" media="screen">
+      #myCanvas{border:2px dotted black;
+      border-radius: 5px;
+      position: absolute;
+       }
+
+       .file-upload {
+            background-color: #ffffff;
+            width: 255px;
+            margin: 19px auto;
+            padding-right: 30px;
+        }
+
+        .file-upload-btn {
+          width: 100%;
+          margin: 12px;
+          color: #fff;
+          background: gray;
+          border: none;
+          padding: 2.5px;
+          border-radius: 8px;
+          transition: all .2s ease;
+          outline: none;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+
+        .file-upload-input {
+          position: absolute;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          outline: none;
+          opacity: 0;
+          cursor: pointer;
+        }
+
+        .image-upload-wrap {
+          margin-top: 20px;
+            border: 3px dashed #808080;
+            position: relative;
+            height: 130px;
+            
+        }
+
+        .image-dropping,
+        .image-upload-wrap:hover {
+          border: 4px dashed #5a5a5a;
+        }
+
+        .drag-text h3 {
+            font-family: Arial; 
+            font-weight: 100;
+            text-transform: uppercase;
+            color: gray;
+            padding: 17px 0;
+            line-height: 22px;
+            text-align: center;
+        }
+
+
+     .inputDnD {
+  .form-control-file {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 6em;
+    outline: none;
+    visibility: hidden;
+    cursor: pointer;
+    background-color: #c61c23;
+    box-shadow: 0 0 5px solid currentColor;
+    &:before {
+      content: attr(data-title);
+      position: absolute;
+      top: 0.5em;
+      left: 0;
+      width: 100%;
+      min-height: 6em;
+      line-height: 2em;
+      padding-top: 1.5em;
+      opacity: 1;
+      visibility: visible;
+      text-align: center;
+      border: 0.25em dashed currentColor;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      overflow: hidden;
+    }
+    &:hover {
+      &:before {
+        border-style: solid;
+        box-shadow: inset 0px 0px 0px 0.25em currentColor;
+      }
+    }
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+
+      <div class="file-upload">
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" id="imageLoader" style="height: 115px" type='file' accept="image/*" onchange="readUrl(this)" data-title="Drag and drop a file" />
+            <div class="drag-text">
+                <h3 style="font-size: 15px;"><i class="fa fa-download"></i><br><b>Drag image here to <br>upload</b></h3>
+            </div>
+        </div>
+
+
+        <br>
+
+        <button class="file-upload-btn" type="button" onclick="document.getElementById('imageLoader').click()"">Choose File</button>
+
+    </div>
+
+
+
+  <br><br><Br>
+
+  <canvas id="myCanvas" width="150" height="150" ></canvas>
+
+  <script type="text/javascript">
+      
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+
+    var fileInput = document.getElementById('imageLoader');
+    fileInput.addEventListener('change', imageLoader, false);
+
+    function imageLoader() {
+      img = new Image();
+      img.onload = function() {
+
+        var MAX_WIDTH = 150;
+        var MAX_HEIGHT = 150;
+        var width = img.width;
+        var height = img.height;
+
+        if (width > height) {
+          if (width > MAX_WIDTH) {
+            height *= MAX_WIDTH / width;
+            width = MAX_WIDTH;
+          }
+        } else {
+          if (height > MAX_HEIGHT) {
+            width *= MAX_HEIGHT / height;
+            height = MAX_HEIGHT;
+          }
+        }
+        var x = (MAX_WIDTH - width) / 2;
+        var y = (MAX_HEIGHT - height) / 2;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, x, y, width, height);
+      }
+      img.src = URL.createObjectURL(fileInput.files[0]);
+    }
+
+  </script>
+
+  <script type="text/javascript">
+    function readUrl(input) {
+  
+  if (input.files && input.files[0]) {
+    let reader = new FileReader();
+    reader.onload = (e) => {
+      let imgData = e.target.result;
+      let imgName = input.files[0].name;
+      input.setAttribute("data-title", imgName);
+      console.log(e.target.result);
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+
+}
+  </script>
+</body>
+</html>    

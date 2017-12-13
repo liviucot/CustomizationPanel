@@ -1,0 +1,70 @@
+<html>
+<head>
+ <style type="text/css">
+     #myCanvas{border:2px dotted black;
+      border-radius: 5px;
+       }
+
+       #myCanvas2{border:2px dotted black;
+      border-radius: 5px;
+       }
+
+       #measure { position: absolute; left: -10000px; top: -100000px;}
+    </style>
+<script type="text/javascript" src="http://fiddle.jshell.net/js/lib/mootools-core-1.4.5-nocompat.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+window.addEvent('load', function() {
+var imageLoader = document.getElementById('imageLoader2');
+    imageLoader.addEventListener('change', handleImage, false);
+var c = document.getElementById('myCanvas2');
+var ctx = c.getContext('2d');
+
+
+function handleImage(e){
+    var reader = new FileReader();
+    reader.onload = function(event){
+        var img = new Image();
+        img.onload = function(){
+
+            var ct = document.getElementById('measure');
+            ct.appendChild(img);
+            var wrh = img.width / img.width;
+            var newWidth = canvas.width;
+            var newHeight = newWidth / wrh;
+
+            if (newHeight > canvas.height){
+              newHeight = canvas.height;
+              newWidth = newHeight
+            }
+
+            ct.removeChild(img);
+            ctx.drawImage(img,0,0, newWidth , newHeight);
+        }
+        img.src = event.target.result;
+    }
+    reader.readAsDataURL(e.target.files[0]);
+}
+
+});//]]>
+
+
+</script>
+</head>
+
+<body>
+<div style="background:#990; padding:20px; ">
+<label>Image File:</label><br/>
+<input type="file" id="imageLoader" name="imageLoader"/>
+<div id="measure"></div>
+</div>
+
+
+                       <canvas id="myCanvas" width=50 height=50 style=" position: absolute; top: 103px; left: 210px; z-index: 10; "></canvas>
+
+                        <canvas id="myCanvas2" width=115 height=100 style=" position: absolute; top: 170px; left: 130px; z-index: 10; "></canvas>
+
+                        <canvas id="canvas3" width=25 height=25 style=" position: absolute; top: 113px; left: 172px; z-index: 10; "></canvas>
+
+</body>
+</html>

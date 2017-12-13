@@ -1,0 +1,384 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <style type="text/css" media="screen">
+      
+      #canvas3 {
+   border: 2px dotted black;
+   border-radius: 5px;
+   position: absolute;
+ }
+ 
+ #canvas4 {
+   border: 2px dotted black;
+   border-radius: 5px;
+   position: absolute;
+ }
+ 
+ .green {
+   border: 0.1px solid #CCC;
+   margin: 1px;
+   zoom: 3;
+   vertical-align: middle;
+   display: inline-block;
+   cursor: pointer;
+   overflow: hidden;
+   width: 22.5px;
+   height: 20px;
+   background-color: #009933;
+ }
+ 
+ .green:hover,
+ .green:active,
+ .green:focus {
+   border: 1px solid black;
+   box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+   opacity: 0.7;
+   text-decoration: none;
+   text-shadow: -1px -1px 0 #136a65;
+   -webkit-transition: all 250ms linear;
+   transition: all 250ms linear;
+ }
+ 
+ .red {
+   border: 0.1px solid #CCC;
+   margin: 1px;
+   zoom: 3;
+   vertical-align: middle;
+   display: inline-block;
+   cursor: pointer;
+   overflow: hidden;
+   width: 22.5px;
+   height: 20px;
+   background-color: #ff0000;
+ }
+ 
+ .red:hover,
+ .red:active,
+ .red:focus {
+   border: 1px solid black;
+   box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+   opacity: 0.7;
+   text-decoration: none;
+   text-shadow: -1px -1px 0 #136a65;
+   -webkit-transition: all 250ms linear;
+   transition: all 250ms linear;
+ }
+ 
+ .black {
+   border: 0.1px solid #CCC;
+   margin: 1px;
+   zoom: 3;
+   vertical-align: middle;
+   display: inline-block;
+   cursor: pointer;
+   overflow: hidden;
+   width: 22.5px;
+   height: 20px;
+   background-color: black;
+ }
+ 
+ .black:hover,
+ .black:active,
+ .black:focus {
+   border: 1px solid black;
+   box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+   opacity: 0.7;
+   text-decoration: none;
+   text-shadow: -1px -1px 0 #136a65;
+   -webkit-transition: all 250ms linear;
+   transition: all 250ms linear;
+ }
+ 
+ .orange {
+   border: 0.1px solid #CCC;
+   margin: 1px;
+   zoom: 3;
+   vertical-align: middle;
+   display: inline-block;
+   cursor: pointer;
+   overflow: hidden;
+   width: 22.5px;
+   height: 20px;
+   background-color: orange;
+ }
+ 
+ .orange:hover,
+ .orange:active,
+ .orange:focus {
+   border: 1px solid black;
+   box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+   opacity: 0.7;
+   text-decoration: none;
+   text-shadow: -1px -1px 0 #136a65;
+   -webkit-transition: all 250ms linear;
+   transition: all 250ms linear;
+ }
+
+  </style>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <div>
+  <select name="change1" onchange="path3(this.value)">
+    <option value="left">Left</option>
+    <option value="center" selected>Center</option>
+    <option value="rightabove">Right Above</option>
+    <option value="rightbelow">Right Below</option>
+  </select>
+
+  <h3 style="font-size: 15px;padding-top: 0px">Choose Colour</h3>
+
+  <button type="button" class="black" data-id="black" onclick="color3(this)"></button>
+  <button type="button" class="red" data-id="red" onclick="color3(this)"></button>
+  <button type="button" class="green" data-id="green" onclick="color3(this)"></button>
+  <button type="button" class="orange" data-id="orange" onclick="color3(this)"></button>
+
+
+  <h3 style="font-size: 15px;padding-top: 0px">Number</h3>
+
+  <input id="sourceText3" type="text" style="height: 32px;width: 223px;">
+
+  <canvas id="canvas3" width="150" height="150" style="position: absolute; top: 113px; left: 400px; z-index: 10;"></canvas>
+
+</div>
+
+<div>
+  <select name="rooms2" onchange="path4(this.value)">
+    <option value="left">Left</option>
+    <option value="center" selected>Center</option>
+    <option value="rightabove">Right Above</option>
+    <option value="rightbelow">Right Below</option>
+  </select>
+
+  <h3 style="font-size: 15px;padding-top: 0px">Choose Colour</h3>
+
+  <button type="button" class="black" data-id="black" onclick="color4(this)"></button>
+  <button type="button" class="red" data-id="red" onclick="color4(this)"></button>
+  <button type="button" class="green" data-id="green" onclick="color4(this)"></button>
+  <button type="button" class="orange" data-id="orange" onclick="color4(this)"></button>
+
+
+  <h3 style="font-size: 15px;padding-top: 0px">Number</h3>
+
+  <input id="sourceText4" type="text" style="height: 32px;width: 223px;">
+
+  <canvas id="canvas4" width="150" height="150" style="position: absolute; top: 313px; left: 400px; z-index: 10;"></canvas>
+
+</div>
+
+
+
+    <script>
+        var canvas3 = document.getElementById("canvas3");
+        var ctx3 = canvas3.getContext("2d");
+
+        ctx3.font = "bold 90px Arial";
+        ctx3.fillStyle = "black";
+        ctx3.textAlign = "center";
+
+        var $text3 = document.getElementById("sourceText3");
+
+        $text3.onkeyup = function(e) {
+          redrawTextsCan3();
+        }
+
+        function redrawTextsCan3() {
+          ctx3.clearRect(0, 0, canvas3.width, canvas3.height);
+          wrapText(ctx3, $text3.value, 66.5, 82, "Arial");
+        }
+
+        function wrapText(context, text, x, y, maxWidth, fontSize, fontFace) {
+          var words = text.split(' ');
+          var line = '';
+          var lineHeight = fontSize;
+
+          context.font = fontSize + " " + fontFace;
+
+          for (var n = 0; n < words.length; n++) {
+            var testLine = line + words[n] + ' ';
+            var metrics = context.measureText(testLine);
+            var testWidth = metrics.width;
+            if (testWidth > maxWidth) {
+              context.fillText(line, x, y);
+              line = words[n] + ' ';
+              y += lineHeight;
+            } else {
+              line = testLine;
+            }
+          }
+          context.fillText(line, x, y);
+          return (y);
+        }
+
+        var loc = document.getElementById("canvas3");
+        var ctxx = loc.getContext("2d");
+
+        function path3(v2) {
+          switch (v2) {
+            // top: 103px; left: 210px
+            case "rightabove":
+              loc.style.top = "93px";
+              loc.style.left = "130px";
+              loc.style.position = "absolute";
+              break;
+
+            case "rightbelow":
+              loc.style.top = "133px";
+              loc.style.left = "130px";
+              loc.style.position = "absolute";
+              break;
+
+            case "left":
+              loc.style.top = "113px";
+              loc.style.left = "400px";
+              loc.style.position = "absolute";
+              break;
+
+            case "center":
+              loc.style.top = "113px";
+              loc.style.left = "173px";
+              loc.style.position = "absolute";
+              break;
+          }
+          redrawTextsCan3();
+        }
+
+
+        function color3(v4) {
+          v4 = v4.dataset.id;
+          switch (v4) {
+            // top: 103px; left: 210px
+
+            case "black":
+              ctx3.fillStyle = '#000000';
+              break;
+
+            case "red":
+              ctx3.fillStyle = "#ff0000";
+              break;
+
+            case "green":
+              ctx3.fillStyle = "#009933";
+              break;
+
+            case "orange":
+              ctx3.fillStyle = "#ff9900";
+              break;
+          }
+          redrawTextsCan3();
+        }
+
+        </script>
+
+        <script>
+
+        var canvas4 = document.getElementById("canvas4");
+        var ctx4 = canvas4.getContext("2d");
+
+        ctx4.font = "bold 90px Arial";
+        ctx4.fillStyle = "black";
+        ctx4.textAlign = "center";
+
+        var $text4 = document.getElementById("sourceText4");
+
+        $text4.onkeyup = function(e) {
+          redrawTextsCan4();
+        }
+
+        function redrawTextsCan4() {
+          ctx4.clearRect(0, 0, canvas4.width, canvas4.height);
+          wrapText(ctx4, $text4.value, 66.5, 82, "Arial");
+        }
+
+        function wrapText(context, text, x, y, maxWidth, fontSize, fontFace) {
+          var words = text.split(' ');
+          var line = '';
+          var lineHeight = fontSize;
+
+          context.font = fontSize + " " + fontFace;
+
+          for (var n = 0; n < words.length; n++) {
+            var testLine = line + words[n] + ' ';
+            var metrics = context.measureText(testLine);
+            var testWidth = metrics.width;
+            if (testWidth > maxWidth) {
+              context.fillText(line, x, y);
+              line = words[n] + ' ';
+              y += lineHeight;
+            } else {
+              line = testLine;
+            }
+          }
+          context.fillText(line, x, y);
+          return (y);
+        }
+
+
+
+        var location2 = document.getElementById("canvas4");
+        var ctxLoc2 = location2.getContext("2d");
+
+          function path4(v) {
+            switch(v) {
+             // top: 103px; left: 210px
+                case "rightabove":
+                    location2.style.top = "93px";
+                    location2.style.left = "130px";
+                    location2.style.position = "absolute";
+                    break;
+
+                case "rightbelow":
+                    location2.style.top = "133px";
+                    location2.style.left = "130px";
+                    location2.style.position = "absolute";
+                    break;
+
+                case "left":
+                    location2.style.top = "113px";
+                    location2.style.left = "310px";
+                    location2.style.position = "absolute";
+                    break;
+
+                case "center":
+                    location2.style.top = "113px";
+                    location2.style.left = "173px";
+                    location2.style.position = "absolute";
+                    break;
+                    }
+          }
+
+        function color4(v4) {
+          v4 = v4.dataset.id;
+          switch (v4) {
+            // top: 103px; left: 210px
+
+            case "black":
+              ctx4.fillStyle = '#000000';
+              break;
+
+            case "red":
+              ctx4.fillStyle = "#ff0000";
+              break;
+
+            case "green":
+              ctx4.fillStyle = "#009933";
+              break;
+
+            case "orange":
+              ctx4.fillStyle = "#ff9900";
+              break;
+          }
+          redrawTextsCan4();
+        }
+        </script>
+
+
+
+
+</body>
+</html>    

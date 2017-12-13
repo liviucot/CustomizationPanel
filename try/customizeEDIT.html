@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ClubWebShop | Register</title>
+
+    <meta name="author" content="ClubWebShop">
+
+
+    <!-- ============================================= -->
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- Add to homescreen for Chrome on Android. Details: http://bit.ly/1otSLve -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="196x196" href="images/chrome-touch-icon-196x196.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color). Details: http://bit.ly/1Uf14P4 -->
+    <meta name="msapplication-TileImage" content="images/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#202429">
+
+    <!-- Add to homescreen for Safari on iOS. Details: http://apple.co/1Uf0FMJ -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ABT HTML5 Template">
+
+    <!-- Apple touch icons. Details: http://apple.co/1Uf0FMJ -->
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-6plus.png">
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+    <script type="text/javascript" src="js/fabric.js"></script>
+    <script type="text/javascript" src="js/tshirtEditor.js"></script>
+    <script type="text/javascript" src="js/jquery.miniColors.min.js"></script>
+    <script class="jsbin" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://fiddle.jshell.net/js/lib/mootools-core-1.4.5-nocompat.js"></script>
+
+
+
+
+
+    <!-- ============================================= -->
+
+    <link type="text/css" rel="stylesheet" href="css/jquery.miniColors.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+
+
+    <!-- CSS files -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700%7CMontserrat:400,700%7CRaleway:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="fonts/elegant_font/html_css/style.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Custom color scheme -->
+    <!-- <link rel="stylesheet" href="css/color.css"> -->
+    <!-- Custom css code -->
+    <!-- <link rel="stylesheet" href="css/custom.css"> -->
+
+    
+    <style type="text/css">
+
+    #myCanvas{border:2px dotted black;
+      border-radius: 5px;
+       }
+
+       #myCanvas2{border:2px dotted black;
+      border-radius: 5px;
+       }
+
+
+        #mute #pause {
+     display: none;
+ }
+ #mute.playing #pause {
+     display: block;
+ }
+ #mute.playing #play {
+     display: none;
+ }
+        
+        .color-preview {
+            border: 0.1px solid #CCC;
+            margin: 1px;
+            zoom: 3;
+            vertical-align: middle;
+            display: inline-block;
+            cursor: pointer;
+            overflow: hidden;
+            width: 22.5px;
+            height: 20px;
+        }
+        
+        .rotate {  
+            -webkit-transform:rotate(90deg);
+            -moz-transform:rotate(90deg);
+            -o-transform:rotate(90deg);
+            /* filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5); */
+            -ms-transform:rotate(90deg);           
+        }
+
+        .file-upload {
+            background-color: #ffffff;
+            width: 255px;
+            margin: 19px auto;
+            padding-right: 30px;
+        }
+
+        .file-upload-btn {
+          width: 100%;
+          margin: 0;
+          color: #fff;
+          background: gray;
+          border: none;
+          padding: 7.5px;
+          border-radius: 0px;   
+          transition: all .2s ease;
+          outline: none;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+
+        .file-upload-btn:hover {
+          background: #5a5a5a;
+          color: #ffffff;
+          transition: all .2s ease;
+          cursor: pointer;
+        }
+
+        .file-upload-btn:active {
+          border: 0;
+          transition: all .2s ease;
+        }
+
+        .file-upload-content {
+          display: none;
+          text-align: center;
+        }
+
+        .file-upload-input {
+          position: absolute;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          outline: none;
+          opacity: 0;
+          cursor: pointer;
+        }
+
+        .image-upload-wrap {
+          margin-top: 20px;
+            border: 3px dashed #808080;
+            position: relative;
+            height: 120px;
+            
+        }
+
+        .image-dropping,
+        .image-upload-wrap:hover {
+          border: 4px dashed #5a5a5a;
+
+
+        }
+
+        .image-title-wrap {
+          padding: 0 15px 15px 15px;
+          color: #222;
+        }
+
+
+        .drag-text {
+          text-align: center;
+        
+        }
+
+        .drag-text h3 {
+            font-weight: 100;
+            text-transform: uppercase;
+            color: gray;
+            padding: 15px 0;
+        }
+
+
+        .file-upload-image {
+          max-height: 200px;
+          max-width: 200px;
+          margin: auto;
+          padding: 20px;
+        }
+
+        .remove-image {
+          width: 200px;
+          margin: 0;
+          color: #fff;
+          background: #cd4535;
+          border: none;
+          padding: 10px;
+          border-radius: 4px;
+          border-bottom: 4px solid #b02818;
+          transition: all .2s ease;
+          outline: none;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+
+        .remove-image:hover {
+          background: #c13b2a;
+          color: #ffffff;
+          transition: all .2s ease;
+          cursor: pointer;
+        }
+
+        .remove-image:active {
+          border: 0;
+          transition: all .2s ease;
+        }
+
+        .Arial{font-family:"Arial";}
+        .Helvetica{font-family:"Helvetica";}
+        .MyriadPro{font-family:"Myriad Pro";}
+        .Delicious{font-family:"Delicious";}
+        .Verdana{font-family:"Verdana";}
+        .Georgia{font-family:"Georgia";}
+        .Courier{font-family:"Courier";}
+        .ComicSansMS{font-family:"Comic Sans MS";}
+        .Impact{font-family:"Impact";}
+        .Monaco{font-family:"Monaco";}
+        .Optima{font-family:"Optima";}
+        .HoeflerText{font-family:"Hoefler Text";}
+        .Plaster{font-family:"Plaster";}
+        .Engagement{font-family:"Engagement";}
+
+     </style>
+
+    </style>
+
+    <script type="text/javascript">
+
+//<![CDATA[ 
+window.addEvent('load', function() {
+var imageLoader = document.getElementById('imageLoader');
+    imageLoader.addEventListener('change', handleImage, false);
+var c = document.getElementById('myCanvas');
+var ctx = c.getContext('2d');
+
+
+function handleImage(e){
+    var reader = new FileReader();
+    reader.onload = function(event){
+        var img = new Image();
+        img.onload = function(){
+
+            max_width = 25;
+
+            max_height = 25;
+
+            img.width = c.width;
+            img.height = c.height;
+            
+
+            ctx.drawImage(img,0,0,50, 40);
+        }
+        img.src = event.target.result;
+    }
+    reader.readAsDataURL(e.target.files[0]);     
+}
+
+});//]]>  
+
+
+</script>
+
+<script type="text/javascript">
+
+//<![CDATA[ 
+window.addEvent('load', function() {
+var imageLoader = document.getElementById('imageLoader2');
+    imageLoader.addEventListener('change', handleImage, false);
+var c = document.getElementById('myCanvas2');
+var ctx = c.getContext('2d');
+
+
+function handleImage(e){
+    var reader = new FileReader();
+    reader.onload = function(event){
+        var img = new Image();
+        img.onload = function(){
+
+            max_width = 25;
+
+            max_height = 25;
+
+            img.width = c.width;
+            img.height = c.height;
+            
+
+            ctx.drawImage(img,35,0,50, 40);
+        }
+        img.src = event.target.result;
+    }
+    reader.readAsDataURL(e.target.files[0]);     
+}
+
+});//]]>  
+
+
+</script>
+  
+
+    <script type="text/javascript">
+        function readURL(input) {
+  if (input.files && input.files[0]) {
+
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      $('.image-upload-wrap').hide();
+
+      $('.file-upload-image').attr('src', e.target.result);
+      $('.file-upload-content').show();
+
+      $('.image-title').html(input.files[0].name);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+
+  } else {
+    removeUpload();
+  }
+}
+
+function removeUpload() {
+  $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+  $('.file-upload-content').hide();
+  $('.image-upload-wrap').show();
+}
+$('.image-upload-wrap').bind('dragover', function () {
+        $('.image-upload-wrap').addClass('image-dropping');
+    });
+    $('.image-upload-wrap').bind('dragleave', function () {
+        $('.image-upload-wrap').removeClass('image-dropping');
+});
+
+</script>
+
+<script type="text/javascript">
+
+
+function genPDF(){
+
+    html2canvas(document.body,{
+      onrendered: function (canvas){
+
+        var img =  canvas.toDataURL("image/png");
+        var doc =  new jsPDF();
+        doc.addImage(img, 'JPEG', 20, 20);
+        doc.save('test.pdf')
+      }
+
+
+    }
+}
+
+
+    </script>
+
+
+</head>
+
+  <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
+
+  <!-- Header -->
+
+        <!-- ============================================= -->
+        <div class="navbar navbar-fixed-top">
+           <div class="navbar-inner">
+             <div class="container">
+               <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+               </a>
+               <a class="brand" href="customize_2nd.html">Customize Panel</a>
+             </div>
+           </div>
+        </div>
+ 
+
+    <div class="container">
+        <section id="typography">
+          <div class="page-header">
+          
+            <ul class="social-icon social-bg" style="padding-top: 20px;padding-right: 0px;padding-left: 882px;">
+                                    <li><a href="https://www.facebook.com/discountfootballkits"><i class="icon social_facebook"></i></a></li>
+                                    <li><a href="https://plus.google.com/+DiscountfootballkitsDFK"><i class="icon social_googleplus"></i></a></li>
+                                    <li><a href="https://www.pinterest.co.uk/discountfk/"><i class="icon social_pinterest"></i></a></li>
+                                    <li><a href="https://twitter.com/DiscountFK"><i class="icon social_twitter"></i></a></li>
+                                    <li><a href="https://www.instagram.com/discountfootballkits/"><i class="icon social_instagram"></i></a></li>
+                                    <li><a href="javascript:genPDF()"><i class="icon fa fa-download"></i></a></li>
+                                    <li><a href="https://www.pinterest.co.uk/discountfk/"><i class="icon fa fa-envelope-o"></i></a></li>
+
+            </ul>
+        
+          <!-- Headings & Paragraph Copy -->
+          <div class="row">         
+            <div class="span3">
+            <br>
+                
+             <div class="panel-group level1" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading1">
+      <h4 class="panel-title">
+        <a role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+          Item 1
+        </a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+      <div class="panel-body">  
+
+      <div class="panel-group level2" id="accordion1" role="tablist" aria-multiselectable="true">
+      
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="heading1_1">
+            <h4 class="panel-title">
+              <a role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse1_1" aria-expanded="true" aria-controls="collapse1_1">
+                Item 1.1
+              </a>
+            </h4>
+          </div>
+          <div id="collapse1_1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1_1">
+            <div class="panel-body">
+              <div style="background:#990; width:100%; padding:20px; ">
+<label>Image File:</label><br/>
+<input type="file" id="imageLoader2" name="imageLoader"/>
+</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="heading1_2">
+            <h4 class="panel-title">
+              <a role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse1_2" aria-expanded="true" aria-controls="collapse1_2">
+                Item 1.2
+              </a>
+
+            </h4>
+          </div>
+          <div id="collapse1_2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1_2">
+            <div class="panel-body">
+              <div style="background:#990; width:100%; padding:20px; ">
+<label>Image File:</label><br/>
+<input type="file" id="imageLoader" name="imageLoader"/>
+</div>
+
+
+            </div>
+          </div>
+        </div>
+      
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading2">
+      <h4 class="panel-title">
+        <a role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+          Item 2
+        </a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+      <div class="panel-body">
+      
+      <div class="panel-group level2" id="accordion2" role="tablist" aria-multiselectable="true">
+      
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="heading2_1">
+            <h4 class="panel-title">
+              <a role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse2_1" aria-expanded="true" aria-controls="collapse2_1">
+                Item 1.1
+              </a>
+            </h4>
+          </div>
+          <div id="collapse2_1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2_1">
+            <div class="panel-body">
+              Lorem ipsum ...
+            </div>
+          </div>
+        </div>
+        
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="heading2_2">
+            <h4 class="panel-title">
+              <a role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse2_2" aria-expanded="true" aria-controls="collapse2_2">
+                Item 1.2
+              </a>
+            </h4>
+          </div>
+          <div id="collapse2_2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2_2">
+            <div class="panel-body">
+              Lorem ipsum ...
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>  
+      </div>
+      </div>
+                  
+                  
+                             
+            
+
+
+            <div class="span8">         
+                    <div align="center" style="min-height: 32px;">
+                        <div class="clearfix">
+                            <div class="btn-group inline pull-left" id="texteditors" style="display:none">                         
+                                <button id="font-family" class="btn dropdown-toggle" data-toggle="dropdown" title="Font Style"><i class="fa fa-font" style="width:19px;height:19px;"></i></button>                             
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="font-family-X">
+                                    <li><a tabindex="-1" href="#" onclick="setFont('Arial');" class="Arial">Arial</a></li>
+                                    <li><a tabindex="-1" href="#" onclick="setFont('Helvetica');" class="Helvetica">Helvetica</a></li>
+                                    <li><a tabindex="-1" href="#" onclick="setFont('Myriad Pro');" class="MyriadPro">Myriad Pro</a></li>
+                                    <li><a tabindex="-1" href="#" onclick="setFont('Delicious');" class="Delicious">Delicious</a></li>
+                                    <li><a tabindex="-1" href="#" onclick="setFont('Verdana');" class="Verdana">Verdana</a></li>
+                                    <li><a tabindex="-1" href="#" onclick="setFont('Georgia');" class="Georgia">Georgia</a></li>
+                                    <li><a tabindex="-1" href="#" onclick="setFont('Courier');" class="Courier">Courier</a></li>
+                                    <li><a tabindex="-1" href="#" onclick="setFont('Comic Sans MS');" class="ComicSansMS">Comic Sans MS</a></li>
+                                    <li><a tabindex="-1" href="#" onclick="setFont('Impact');" class="Impact">Impact</a></li>
+                                    <li><a tabindex="-1" href="#" onclick="setFont('Monaco');" class="Monaco">Monaco</a></li>
+                                    <li><a tabindex="-1" href="#" onclick="setFont('Optima');" class="Optima">Optima</a></li>
+                                    <li><a tabindex="-1" href="#" onclick="setFont('Hoefler Text');" class="Hoefler Text">Hoefler Text</a></li>
+                                    <li><a tabindex="-1" href="#" onclick="setFont('Plaster');" class="Plaster">Plaster</a></li>
+                                    <li><a tabindex="-1" href="#" onclick="setFont('Engagement');" class="Engagement">Engagement</a></li>
+                                </ul>
+                                <button id="text-bold" class="btn" data-original-title="Bold"><i class="fa fa-bold" style="width:19px;height:19px;"></i></button>
+                                <button id="text-italic" class="btn" data-original-title="Italic"><i class="fa fa-italic" style="width:19px;height:19px;"></i></button>
+                                <button id="text-strike" class="btn" title="Strike" style=""><i class="fa fa-strikethrough" style="width:19px;height:19px;"></i></button>
+                                <button id="text-underline" class="btn" title="Underline" style=""><i class="fa fa-underline" style="width:19px;height:19px;"></i></button>
+                                <a class="btn" href="#" rel="tooltip" data-placement="top" data-original-title="Font Color"><input type="hidden" id="text-fontcolor" class="color-picker" size="7" value="#000000"></a>
+                                <a class="btn" href="#" rel="tooltip" data-placement="top" data-original-title="Font Border Color"><input type="hidden" id="text-strokecolor" class="color-picker" size="7" value="#000000"></a>
+                            </div>                            
+                            <div class="pull-right" align="" id="imageeditor" style="display:none">
+                              <div class="btn-group">                                             
+                                  <button class="btn" id="bring-to-front" title="Bring to Front"><i class="fa fa-undo" style="height:19px;"></i></button>
+                                  <button class="btn" id="send-to-back" title="Send to Back"><i class="fa fa-repeat" style="height:19px;"></i></button>
+                                  <button id="flip" type="button" class="btn" title="Show Back View"><i class="fa fa-retweet" style="height:19px;"></i></button>
+                                  <button id="remove-selected" class="btn" title="Delete selected item"><i class="fa fa-trash" style="height:19px;"></i></button>
+                              </div>
+                            </div>            
+                        </div>                                              
+                    </div>                          
+                <!--    EDITOR      -->  
+                
+            <div class="span9 well admin-menu" id="1">
+            <br>
+
+                <div class="span4">         
+                    <div id="shirtDiv" class="page" style="width: 380px; height: 400px; position: relative; background-color: rgb(255, 255, 255);">
+                        
+
+                        <img id="tshirtFacing" src="images/front.png"></img>
+                        <canvas id="myCanvas" width=50 height=50 style=" position: absolute; top: 113px; left: 372px; z-index: 10; "></canvas>
+
+                        <canvas id="myCanvas2" width=115 height=30 style=" position: absolute; top: 178px; left: 130px; z-index: 10; "></canvas>
+
+                        <div id="drawingArea" style="position: absolute;top: 10px;left: 75px;z-index: 10;width: 200px;height: 400px;">                
+
+                            <canvas id="tcanvas" width=200 height="400" class="hover" style="-webkit-user-select: none;"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="span4">
+                    <div id="shirtBack" class="page" style="width: 380px; height: 400px; position: relative; padding-left: 300px background-color: rgb(255, 255, 255);">
+                        <img id="tshirtBack" src="images/back.png"></img>
+
+
+                        <div id="drawingArea" style="position: absolute;top: 50px;left: 120px;z-index: 10;width: 200px;height: 400px;">                
+
+                            <canvas id="tcanvas" width=200 height="400" class="hover" style="-webkit-user-select: none;"></canvas>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="span4">
+                
+                <br>
+                </div>
+            </div>
+
+
+
+            </div>    
+                <!--    /EDITOR     -->
+            </div>
+    
+            
+        
+          </div>
+        
+        </section>
+    </div><!-- /container -->
+    <br><br>
+
+
+
+<!-- Footer ================================================== -->
+      <footer class="footer navbar-bottom" style="background-color: black">
+             <div class="container">
+             <br>
+            <p class="pull-right"><a href="#">Back to top</a></p>           
+          </div>
+           </div>
+        </div>      
+               
+    </footer>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->    
+    <script src="js/bootstrap.min.js"></script>  
+
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>  
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35639689-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type="text/javascript">
+    
+    function add_google_logo() {
+        var src = "file-upload-image";
+        show_image("file-upload-image", 576,110);
+    }
+
+
+    function show_image(src, width, height, alt) {
+        var img = document.createElement("img");
+        img.src = src;
+        img.width = width;
+        img.height = height;
+        img.alt = alt;
+        document.body.appendChild(img);
+    }
+</script>
+
+    <script type="text/javascript">
+        
+        $('#nav div').hide();
+        $('#nav div:first').hide();
+        $('#nav ul li:first').addClass('active');
+        $('#nav ul li a').click(function(){
+        var currentTab = $(this).attr('href');
+        var vis = $(currentTab).is(':visible'); 
+        $('#nav div').hide();
+        $('#nav ul li').removeClass('active');
+        $(this).parent().addClass('active'); 
+        if(vis) {
+            $(currentTab).hide();
+        } else {
+            $(currentTab).show();
+        }
+    });
+
+    </script>
+
+    <script type="text/javascript">
+      <script type="text/javascript">
+// <![CDATA[
+// Script to add Text in Canvas from input text field, as it is typed
+// From: http://coursesweb.net/
+
+// function to clear the canvas
+// cnv = the object with the canvas element
+function clearCanvas(cnv) {
+  var ctx = cnv.getContext('2d');     // gets reference to canvas context
+  ctx.beginPath();    // clear existing drawing paths
+  ctx.save();         // store the current transformation matrix
+
+  // Use the identity matrix while clearing the canvas
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.clearRect(0, 0, cnv.width, cnv.height);
+
+  ctx.restore();        // restore the transform
+}
+
+// adds the text in canvas, oon multiple lines
+// ctx = reference to canvas context
+// text = the text to add
+// x = horizontal position where to start adding the text
+// y = vertical position where to start adding the text
+// maxWidth = the maximum width of the text line
+//  lineHeight = the height of the line
+function  addTextCnv(ctx, text, x, y, maxWidth, lineHeight) {
+  // splits the text in words to can wrap it on new lie if exceds maxWidth
+  var words = text.split(' ');
+  var nr_w = words.length
+  var addtxt = '';
+
+  // sets to add the text and rows
+  for(var n = 0; n < nr_w; n  ) {
+    var txtLine = addtxt   words[n]   ' ';
+    var metrics = ctx.measureText(txtLine);
+    var txtWidth = metrics.width;
+    if (txtWidth > maxWidth && n > 0) {
+      ctx.fillText(addtxt, x, y);
+      addtxt = words[n]   ' ';
+      y  = lineHeight;
+    }
+    else addtxt = txtLine;
+  }
+
+  // adds the text in canvas (sets text color, font type and size)
+  ctx.fillStyle = '#0001be';
+  ctx.font = 'bold 17px sans-serif';
+  ctx.fillText(addtxt, x, y);
+}
+
+// get a reference to the canvas element, and its context
+var cnv1 = document.getElementById('cnv1');
+var ctx1 = cnv1.getContext('2d');
+
+// sets maximum line width, line height, and x /y coords for text
+var maxWidth = cnv1.width - 10;
+var lineHeight = 23;
+var x_pos = (cnv1.width - maxWidth) / 2;
+var y_pos = 15;
+
+// register onkeyup event for #text_cnv text field to add the text in canvas as it is typed
+document.getElementById('text_cnv').onkeyup = function() {
+  clearCanvas(cnv1);      // clears the canvas
+  addTextCnv(ctx1, this.value, x_pos, y_pos, maxWidth, lineHeight);
+}
+// ]]>
+</script>
+
+
+
+    </script>
+    
+  </body>
+</html>
