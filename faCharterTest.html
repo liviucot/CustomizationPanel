@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+   
+
+    <style type="text/css"> 
+     #faCharter1 {
+   border: 2px dotted red;
+   border-radius: 5px;
+ }
+    </style>
+
+  </head>
+
+<body>
+
+ <button type="button" id="addBadge">Add image</button>
+<button type="button" id="deleteBadge">Remove Image </button>
+<canvas id="faCharter1" width="500" height="500"></canvas>
+
+
+  <script type="text/javascript">
+
+        //FA CHARTER EMBROIDERED BADGE
+
+       var charterCanvas = document.getElementById("faCharter1");
+        var charterCtx = faCharter1.getContext("2d");
+
+        var stdEmbroMcDonalds = new Image();
+
+        function addBadge(){    
+            stdEmbroMcDonalds.onload = function(){
+                charterCtx.drawImage(stdEmbroMcDonalds, 0, 0, 200, 150);
+            };
+            stdEmbroMcDonalds.src = "https://userimages.clubwebsite.co.uk/untitled_5553c5827779b.png";
+        }
+
+        function deleteBadge(){
+          charterCtx.clearRect(0, 0, 500, 500);
+        }
+
+        $("#addBadge").click(addBadge);
+        $("#deleteBadge").click(deleteBadge);
+
+  </script>
+
+</body>
+</html>       

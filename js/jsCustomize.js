@@ -138,26 +138,26 @@
             switch(v5) {
              // top: 103px; left: 210px
                 case "rightabove":
-                    location5.style.top = "93px";
-                    location5.style.left = "130px";
+                    location5.style.top = "90px";
+                    location5.style.left = "131px";
                     location5.style.position = "absolute";
                     break;
 
                 case "rightbelow":
-                    location5.style.top = "133px";
-                    location5.style.left = "130px";
+                    location5.style.top = "132px";
+                    location5.style.left = "131px";
                     location5.style.position = "absolute";
                     break;
 
                 case "left":
-                    location5.style.top = "113px";
-                    location5.style.left = "210px";
+                    location5.style.top = "110px";
+                    location5.style.left = "220px";
                     location5.style.position = "absolute";
                     break;
 
                 case "center":
-                    location5.style.top = "113px";
-                    location5.style.left = "173px";
+                    location5.style.top = "110px";
+                    location5.style.left = "174px";
                     location5.style.position = "absolute";
                     break;
                     }
@@ -259,26 +259,26 @@
             switch(v5) {
              // top: 103px; left: 210px
                 case "rightabove":
-                    location12.style.top = "93px";
-                    location12.style.left = "130px";
+                    location12.style.top = "90px";
+                    location12.style.left = "131px";
                     location12.style.position = "absolute";
                     break;
 
                 case "rightbelow":
-                    location12.style.top = "133px";
-                    location12.style.left = "130px";
+                    location12.style.top = "132px";
+                    location12.style.left = "131px";
                     location12.style.position = "absolute";
                     break;
 
                 case "left":
-                    location12.style.top = "113px";
-                    location12.style.left = "210px";
+                    location12.style.top = "110px";
+                    location12.style.left = "220px";
                     location12.style.position = "absolute";
                     break;
 
                 case "center":
-                    location12.style.top = "113px";
-                    location12.style.left = "173px";
+                    location12.style.top = "110px";
+                    location12.style.left = "174px";
                     location12.style.position = "absolute";
                     break;
                     }
@@ -352,26 +352,26 @@
             switch(v9) {
              // top: 103px; left: 210px
                 case "rightabove":
-                    location9.style.top = "93px";
-                    location9.style.left = "130px";
+                    location9.style.top = "90px";
+                    location9.style.left = "131px";
                     location9.style.position = "absolute";
                     break;
 
                 case "rightbelow":
-                    location9.style.top = "133px";
-                    location9.style.left = "130px";
+                    location9.style.top = "136px";
+                    location9.style.left = "132px";
                     location9.style.position = "absolute";
                     break;
 
                 case "left":
-                    location9.style.top = "113px";
-                    location9.style.left = "210px";
+                    location9.style.top = "111px";
+                    location9.style.left = "220px";
                     location9.style.position = "absolute";
                     break;
 
                 case "center":
-                    location9.style.top = "113px";
-                    location9.style.left = "173px";
+                    location9.style.top = "111px";
+                    location9.style.left = "175px";
                     location9.style.position = "absolute";
                     break;
                     }
@@ -465,39 +465,6 @@
           return (y);
         }
 
-
-        var location13 = document.getElementById("canvas13");
-        var ctxLoc13 = location13.getContext("2d");
-
-          function path13(v9) {
-            switch(v9) {
-             // top: 103px; left: 210px
-                case "rightabove":
-                    location13.style.top = "93px";
-                    location13.style.left = "130px";
-                    location13.style.position = "absolute";
-                    break;
-
-                case "rightbelow":
-                    location13.style.top = "133px";
-                    location13.style.left = "130px";
-                    location13.style.position = "absolute";
-                    break;
-
-                case "left":
-                    location13.style.top = "113px";
-                    location13.style.left = "210px";
-                    location13.style.position = "absolute";
-                    break;
-
-                case "center":
-                    location13.style.top = "113px";
-                    location13.style.left = "173px";
-                    location13.style.position = "absolute";
-                    break;
-                    }
-          }
-
         function color13(v9) {
           v9 = v9.dataset.id;
           switch (v9) {
@@ -515,10 +482,48 @@
           redrawTextsCan13();
         }
 
-        //WRITE TEXT AND CHANGE COLOR OF PLAYERS NAME
+        var location14 = document.getElementById("canvas13");
+        var ctxLoc14 = location14.getContext("2d");
 
-        var canvas2 = document.getElementById("canvas2");
+          function path13(v9) {
+            switch(v9) {
+             // top: 103px; left: 210px
+                case "rightabove":
+                    location14.style.top = "90px";
+                    location14.style.left = "131px";
+                    location14.style.position = "absolute";
+                    break;
+
+                case "rightbelow":
+                    location14.style.top = "136px";
+                    location14.style.left = "132px";
+                    location14.style.position = "absolute";
+                    break;
+
+                case "left":
+                    location14.style.top = "111px";
+                    location14.style.left = "220px";
+                    location14.style.position = "absolute";
+                    break;
+
+                case "center":
+                    location14.style.top = "111px";
+                    location14.style.left = "175px";
+                    location14.style.position = "absolute";
+                    break;
+                    }
+          }
+
+
+        //WRITE TEXT AND CHANGE COLOR OF PLAYERS NAME
+        /*
+          var canvas2 = document.getElementById("canvas2");
           var ctx2 = canvas2.getContext("2d");
+          var $playersNameText = document.getElementById("playersNameSourceText");
+
+          $playersNameText.onkeyup = function(e) {
+            redrawTextsCan2();
+          }
 
           $('#nametag').bind('change keyup input', redrawTextsCan2);
           $('#line2').bind('click', redrawTextsCan2);
@@ -600,9 +605,9 @@
             redrawTextsCan2();
           }
 
-
+*/
           //WRITE TEXT AND CHANGE COLOR OF CLUB NAME
-
+/*
           var canvas4 = document.getElementById("canvas4");
           var ctx4 = canvas4.getContext("2d");
 
@@ -753,123 +758,126 @@
                 redrawTextsCan4();  
             }
 
-
+*/  
           //WRITE TEXT, CHANGE COLOR, FONT FOR SPONSOR TEXT
 
-
-            /*var canvas11 = document.getElementById("canvas11");
+            var canvas11 = document.getElementById("canvas11");
             var ctx11 = canvas11.getContext("2d");
+            var selectedTextFont = "Arial Black";
+            var selectedFontSize1 = "20px";
+            var selectedFontStyle = "bold";
+            var selectedFontColor = "#000000";
+            var selectedFontSize2 = "20px";
 
-            $('#nametag1').bind('change keyup input1', redrawTextsCan11);
-            $('#line3').bind('click1', redrawTextsCan11);
-            $('#line4').bind('click1', redrawTextsCan11);
+            $('#nametag2').bind('change keyup input', redrawTextsCan11);
+            $('#line4').bind('click', redrawTextsCan11);
+            $('#line5').bind('click', redrawTextsCan11);
 
             function redrawTextsCan11() {
-
               ctx11.clearRect(0, 0, canvas11.width, canvas11.height);
               ctx11.textAlign = "center";
-
-              ctx11.font = "bold 18px Arial";
-
-              var width = ctx11.measureText($('#line3').val()).width;
-
-              if (width > 90) {
-                ctx11.font = "bold 18px Arial";
-              }
-              var width = ctx11.measureText($('#line3').val()).width;
-              if (width > 90) {
-                ctx11.font = "bold 17px Arial";
-              }
-              var width = ctx11.measureText($('#line3').val()).width;
-              if (width > 90) {
-                ctx11.font = "bold 16px Arial";
-              }
-              var width = ctx11.measureText($('#line3').val()).width;
-              if (width > 90) {
-                ctx11.font = "bold 15px Arial";
-              }
-              var width = ctx11.measureText($('#line3').val()).width;
-              if (width > 90) {
-                ctx11.font = "bold 14px Arial";
-              }
-              var width = ctx11.measureText($('#line3').val()).width;
-              if (width > 90) {
-                ctx11.font = "bold 13px Arial";
-              }
-              var width = ctx11.measureText($('#line3').val()).width;
-              if (width > 90) {
-                ctx11.font = "bold 12px Arial";
-              }
-              var width = ctx11.measureText($('#line3').val()).width;
-              if (width > 90) {
-                ctx11.font = "bold 11px Arial";
-              }
-              var width = ctx11.measureText($('#line3').val()).width;
-              if (width > 90) {
-                ctx11.font = "bold 10px Arial";
-              }
-              var width = ctx11.measureText($('#line3').val()).width;
-              if (width > 90) {
-                ctx11.font = "bold 9px Arial";
-              }
+              ctx11.fillStyle = selectedFontColor;
               
-
-              ctx11.fillText($('#line3').val().toUpperCase(), canvas11.width * 0.5, 20);
+              selectedFontSize1 = fitTextOnCanvas(ctx11, $('#line4').val().toUpperCase(), selectedTextFont);
+              ctx11.font = selectedFontStyle + " " + selectedFontSize1 + "px " + selectedTextFont;
+              ctx11.fillText($('#line4').val().toUpperCase(), canvas11.width * 0.5, 30);
               
-              var width = ctx11.measureText($('#line4').val()).width;
-
-              if (width > 100) {
-                ctx11.font = "bold 19px Arial";
-              }
-              var width = ctx11.measureText($('#line4').val()).width;
-              if (width > 100) {
-                ctx11.font = "bold 18px Arial";
-              }
-              var width = ctx11.measureText($('#line4').val()).width;
-              if (width > 100) {
-                ctx11.font = "bold 17px Arial";
-              }
-              var width = ctx11.measureText($('#line4').val()).width;
-              if (width > 100) {
-                ctx11.font = "bold 16px Arial";
-              }
-              var width = ctx11.measureText($('#line4').val()).width;
-              if (width > 100) {
-                ctx11.font = "bold 15px Arial";
-              }
-              var width = ctx11.measureText($('#line4').val()).width;
-              if (width > 100) {
-                ctx11.font = "bold 14px Arial";
-              }
-              var width = ctx11.measureText($('#line4').val()).width;
-              if (width > 100) {
-                ctx11.font = "bold 13px Arial";
-              }
-              var width = ctx11.measureText($('#line4').val()).width;
-              if (width > 100) {
-                ctx11.font = "bold 12px Arial";
-              }
-              var width = ctx11.measureText($('#line4').val()).width;
-              if (width > 100) {
-                ctx11.font = "bold 11px Arial";
-              }
-              var width = ctx11.measureText($('#line4').val()).width;
-              if (width > 100) {
-                ctx11.font = "bold 10px Arial";
-              }
-              var width = ctx11.measureText($('#line4').val()).width;
-              if (width > 100) {
-                ctx11.font = "bold 9px Arial";
-              }
-              var width = ctx11.measureText($('#line4').val()).width;
-              if (width > 100) {
-                ctx11.font = "bold 8px Arial";
-              }
-
-              ctx11.fillText($('#line4').val().toUpperCase(), canvas11.width * 0.5, 40);
-
+              selectedFontSize2 = fitTextOnCanvas(ctx11, $('#line5').val().toUpperCase(), selectedTextFont);
+              ctx11.font = selectedFontStyle + " " + selectedFontSize2 + "px " + selectedTextFont;
+              ctx11.fillText($('#line5').val().toUpperCase(), canvas11.width * 0.5, 50);
             }
 
+            function fitTextOnCanvas(ctx, text, fontface){    
+              var size = measureTextBinaryMethod(ctx, text, fontface, 0, 80, canvas11.width);
+              if (size > 18) return 18;
+              return size;
+            }
+
+            function measureTextBinaryMethod(ctx, text, fontface, min, max, desiredWidth) {
+              if (max-min < 1) {
+                return min;   
+              }
+              var test = min+((max-min)/2); //Find half interval
+              ctx.font=test+"px "+fontface;
+              measureTest = ctx.measureText(text).width;
+              if ( measureTest > desiredWidth) {
+                var found = measureTextBinaryMethod(ctx, text, fontface, min, test, desiredWidth)
+              } else {
+                var found = measureTextBinaryMethod(ctx, text, fontface, test, max, desiredWidth)
+              }
+              return found;
+            }
+
+            function color11(v11) {
+              v11 = v11.dataset.id;
+              switch (v11) {
+                // top: 103px; left: 210px
+
+                case "white":
+                  selectedFontColor = '#ffffff';
+                  break;
+
+                case "black":
+                  selectedFontColor = '#000000';
+                  break;
+
+                case "blue":
+                  selectedFontColor = '#0033ff';
+                  break;
+
+                case "red":
+                  selectedFontColor = "#ff0000";
+                  break;
+
+                case "navyblue":
+                  selectedFontColor = '#000066';
+                  break;
+
+                case "yellow":
+                  selectedFontColor = "#ffff00";
+                  break;
+
+                case "green":
+                  selectedFontColor = "#009933";
+                  break;
+
+                case "littleblue":
+                  selectedFontColor = "#33ccff";
+                  break;
+
+                case "orange":
+                  selectedFontColor = "#ff9900";
+                  break;
+              }
+              redrawTextsCan11();
+            }
+
+            function chfont5(v5) {
+              switch (v5) {
+                // top: 103px; left: 210px
+                case "arial":
+                  selectedTextFont = "Arial Black";
+                  break;
+
+                case "comic":
+                  selectedTextFont = "Comic Sans MS";
+                  break;
+
+                case "lucida":
+                  selectedTextFont = "Lucida Sans";
+                  break;
+
+                case "franklin":
+                  selectedTextFont = "Franklin Gothic";
+                  break;
+
+                case "impact":
+                  selectedTextFont = "Impact";
+                  break;
+              }
+              redrawTextsCan11();
+            }
+          
             var location13 = document.getElementById("canvas11");
             var ctxLoc13 = location13.getContext("2d");
 
@@ -890,24 +898,24 @@
 
                     case "center":
                         location13.style.top = "170px";
-                        location13.style.left = "134px"; 
+                        location13.style.left = "131px"; 
                         location13.style.position = "absolute";
                         break;
 
                     case "toprear":
-                        location13.style.top = "65px";
+                        location13.style.top = "60px";
                         location13.style.left = "505px";
                         location13.style.position = "absolute";
                         break;
 
                     case "bottomrear":
-                        location13.style.top = "225px"
-                        location13.style.left = "507px";
+                        location13.style.top = "220px"
+                        location13.style.left = "509px";
                         location13.style.position = "absolute";
                         break;
                         }
               }
-
+              /*
               function color11(v11) {
                 v11 = v11.dataset.id;
                 switch (v11) {
@@ -951,34 +959,7 @@
                 }
                 redrawTextsCan11();
               }
-
-              function chfont5(v13) {
-                  switch(v13) {
-                   // top: 103px; left: 210px
-                      case "arial":
-                          ctx11.font = "bold 14px Arial Black"; 
-                          break;
-
-                      case "comic":
-                          ctx11.font = "bold 14px Comic Sans MS";
-                          break;
-
-                      case "lucida":
-                          ctx11.font = "bold 14px Lucida Sans";
-                          break;
-
-                      case "franklin":
-                          ctx11.font = "bold 14px Franklin Gothic";
-                          break;
-
-                      case "impact":
-                          ctx11.font = "16px Impact";
-                          break;
-                        }
-                    redrawTextsCan11();  
-                }
-                */
-
+              */
 
 
           //WRITE TEXT AND CHANGE COLOR OF 1" INITIALS
@@ -998,7 +979,7 @@
 
           function redrawTextsCan7() {
             ctx7.clearRect(0, 0, canvas7.width, canvas7.height);
-            wrapText(ctx7, $text7.value, 22, 18, "Arial");
+            wrapText(ctx7, $text7.value, 22, 18, "MyFont");
           }
 
           function wrapText(context, text, x, y, maxWidth, fontSize, fontFace) {
@@ -1032,26 +1013,26 @@
               switch(v7) {
                // top: 103px; left: 210px
                   case "rightabove":
-                      location7.style.top = "93px";
-                      location7.style.left = "125px";
+                      location7.style.top = "92px";
+                      location7.style.left = "124px";
                       location7.style.position = "absolute";
                       break;
 
                   case "rightbelow":
-                      location7.style.top = "133px";
-                      location7.style.left = "125 px";
+                      location7.style.top = "134px";
+                      location7.style.left = "125px";
                       location7.style.position = "absolute";
                       break;
 
                   case "left":
-                      location7.style.top = "113px";
+                      location7.style.top = "110px";
                       location7.style.left = "210px";
                       location7.style.position = "absolute";
                       break;
 
                   case "center":
-                      location7.style.top = "113px";
-                      location7.style.left = "173px";
+                      location7.style.top = "110px";
+                      location7.style.left = "171px";
                       location7.style.position = "absolute";
                       break;
                       }
@@ -1152,14 +1133,14 @@
             switch(v10) {
              // top: 103px; left: 210px
                 case "rightabove":
-                    location10.style.top = "93px";
+                    location10.style.top = "92px";
                     location10.style.left = "125px";
                     location10.style.position = "absolute";
                     break;
 
                 case "rightbelow":
-                    location10.style.top = "133px";
-                    location10.style.left = "125 px";
+                    location10.style.top = "138px";
+                    location10.style.left = "126px";
                     location10.style.position = "absolute";
                     break;
 
@@ -1171,7 +1152,7 @@
 
                 case "center":
                     location10.style.top = "113px";
-                    location10.style.left = "173px";
+                    location10.style.left = "172px";
                     location10.style.position = "absolute";
                     break;
                     }
@@ -1221,7 +1202,7 @@
           redrawTextsCan10();
         }
 
-        //WRITE TEXT AND CHANGE COLOR OF EMBROIDERY TEXT
+       /* //WRITE TEXT AND CHANGE COLOR OF EMBROIDERY TEXT
 
         var canvas3 = document.getElementById("canvas3");
         var ctx3 = canvas3.getContext("2d");
@@ -1361,448 +1342,66 @@
                   }
               redrawTextsCan3();  
           }
+          */
 
           //WRITE TEXT AND CHANGE COLOR OF BIG NIKE NUMBERS
 
           var canvas8 = document.getElementById("canvas8");
-        var ctx8 = canvas8.getContext("2d");
+          var ctx8 = canvas8.getContext("2d");
 
-        ctx8.font = "105px NikeFont";
-        ctx8.fillStyle = "white";
-        ctx8.textAlign = "center";
+          ctx8.font = "105px NikeFont";
+          ctx8.fillStyle = "white";
+          ctx8.textAlign = "center";
 
-        var $text8 = document.getElementById("sourceText8");
+          var $text8 = document.getElementById("sourceText8");
 
-        $text8.onkeyup = function(e) {
-          redrawTextsCan8();
-        }
+          $text8.onkeyup = function(e) {
+            redrawTextsCan8();
+          }
 
-        function redrawTextsCan8() {
-          ctx8.clearRect(0, 0, canvas8.width, canvas8.height);
-          wrapText(ctx8, $text8.value, 74.5, 102, "NikeFont");
-        }
+          function redrawTextsCan8() {
+            ctx8.clearRect(0, 0, canvas8.width, canvas8.height);
+            wrapText(ctx8, $text8.value, 74.5, 102, "NikeFont");
+          }
 
-        function wrapText(context, text, x, y, maxWidth, fontSize, fontFace) {
-          var words = text.split(' ');
-          var line = '';
-          var lineHeight = fontSize;
+          function wrapText(context, text, x, y, maxWidth, fontSize, fontFace) {
+            var words = text.split(' ');
+            var line = '';
+            var lineHeight = fontSize;
 
-          context.font = fontSize + " " + fontFace;
+            context.font = fontSize + " " + fontFace;
 
-          for (var n = 0; n < words.length; n++) {
-            var testLine = line + words[n] + ' ';
-            var metrics = context.measureText(testLine);
-            var testWidth = metrics.width;
-            if (testWidth > maxWidth) {
-              context.fillText(line, x, y);
-              line = words[n] + ' ';
-              y += lineHeight;
-            } else {
-              line = testLine;
+            for (var n = 0; n < words.length; n++) {
+              var testLine = line + words[n] + ' ';
+              var metrics = context.measureText(testLine);
+              var testWidth = metrics.width;
+              if (testWidth > maxWidth) {
+                context.fillText(line, x, y);
+                line = words[n] + ' ';
+                y += lineHeight;
+              } else {
+                line = testLine;
+              }
             }
-          }
-          context.fillText(line, x, y);
-          return (y);
-        }
-
-
-        function color8(v8) {
-          v8 = v8.dataset.id;
-          switch (v8) {
-            // top: 103px; left: 210px
-
-            case "white":
-              ctx8.fillStyle = '#ffffff';
-              break;
-
-             case "black":
-              ctx8.fillStyle = '#000000';
-              break;
-          }
-          redrawTextsCan8();
-        }
-
-
-        //FA CHARTER EMBROIDERED BADGE
-
-          var c1 = document.getElementById("c1");
-          var ctxC1 = c1.getContext("2d");
-
-          var faCharter1 = new Image();
-          faCharter1.src = 'images/charterstandardclubwithmcdonalds.png';
-
-          function add_picture1() {
-            ctxC1.drawImage(faCharter1, 0, 0, 50, 50);
+            context.fillText(line, x, y);
+            return (y);
           }
 
-          function Clear_image1() {
-            ctxC1.clearRect(1, 1, 600, 300);
-          }
 
-          var l1 = document.getElementById("c1");
-          var cl1 = l1.getContext("2d");
-
-          function loc1(v1) {
-            switch (v1) {
+          function color8(v8) {
+            v8 = v8.dataset.id;
+            switch (v8) {
               // top: 103px; left: 210px
-              case "right":
-                l1.style.top = "103px";
-                l1.style.left = "110px";
-                l1.style.position = "absolute";
+
+              case "white":
+                ctx8.fillStyle = '#ffffff';
                 break;
 
-              case "left":
-                l1.style.top = "103px";
-                l1.style.left = "210px";
-                l1.style.position = "absolute";
-                break;
-
-              case "center":
-                l1.style.top = "103px";
-                l1.style.left = "167px";
-                l1.style.position = "absolute";
-                break;
-
-              case "rightarm":
-                l1.style.top = "103px";
-                l1.style.left = "70px";
-                l1.style.position = "absolute";
-                break;
-
-              case "leftarm":
-                l1.style.top = "103px";
-                l1.style.left = "255px";
-                l1.style.position = "absolute";
+               case "black":
+                ctx8.fillStyle = '#000000';
                 break;
             }
-          }
-
-          //FA CHARTER EMBROIDERED BADGE NO MCDONALDS
-
-          var c2 = document.getElementById("c2");
-          var ctxC2 = c2.getContext("2d");
-
-          var faCharter2 = new Image();
-          faCharter2.src = 'images/CharterStandardclub.png';
-
-          function add_picture2() {
-            ctxC2.drawImage(faCharter2, 0, 0, 50, 50);
-          }
-
-          function Clear_image2() {
-            ctxC2.clearRect(1, 1, 600, 300);
-          }
-
-          var l2 = document.getElementById("c2");
-          var cl2 = l2.getContext("2d");
-
-          function loc1(v1) {
-            switch (v1) {
-              // top: 103px; left: 210px
-              case "right":
-                l2.style.top = "103px";
-                l2.style.left = "110px";
-                l2.style.position = "absolute";
-                break;
-
-              case "left":
-                l2.style.top = "103px";
-                l2.style.left = "210px";
-                l2.style.position = "absolute";
-                break;
-
-              case "center":
-                l2.style.top = "103px";
-                l2.style.left = "167px";
-                l2.style.position = "absolute";
-                break;
-
-              case "rightarm":
-                l2.style.top = "103px";
-                l2.style.left = "70px";
-                l2.style.position = "absolute";
-                break;
-
-              case "leftarm":
-                l2.style.top = "103px";
-                l2.style.left = "255px";
-                l2.style.position = "absolute";
-                break;
-            }
-          }
-
-          //FA CHARTER DEVELOPMENT EMBROIDERED BADGE
-
-          var c3 = document.getElementById("c3");
-          var ctxC3 = c3.getContext("2d");
-
-          var faCharter3 = new Image();
-          faCharter3.src = 'images/the-FA-Charter-Development-Club.png';
-
-          function add_picture3() {
-            ctxC3.drawImage(faCharter3, 0, 0, 50, 50);
-          }
-
-          function Clear_image3() {
-            ctxC3.clearRect(1, 1, 600, 300);
-          }
-
-          var l3 = document.getElementById("c3");
-          var cl3 = l3.getContext("2d");
-
-          function loc3(v3) {
-            switch (v3) {
-              // top: 103px; left: 210px
-              case "right":
-                l3.style.top = "103px";
-                l3.style.left = "110px";
-                l3.style.position = "absolute";
-                break;
-
-              case "left":
-                l3.style.top = "103px";
-                l3.style.left = "210px";
-                l3.style.position = "absolute";
-                break;
-
-              case "center":
-                l3.style.top = "103px";
-                l3.style.left = "167px";
-                l3.style.position = "absolute";
-                break;
-
-              case "rightarm":
-                l3.style.top = "103px";
-                l3.style.left = "70px";
-                l3.style.position = "absolute";
-                break;
-
-              case "leftarm":
-                l3.style.top = "103px";
-                l3.style.left = "255px";
-                l3.style.position = "absolute";
-                break;
-            }
-          }
-
-          //FA CHARTER STANDARD PRINTED BADGE
-
-          var c4 = document.getElementById("c4");
-          var ctxC4 = c4.getContext("2d");
-
-          ctxC4.webkitImageSmoothingEnabled = false;
-          ctxC4.mozImageSmoothingEnabled = false;
-          ctxC4.imageSmoothingEnabled = false;
-
-          var faCharter4 = new Image();
-          faCharter4.src = 'images/charterstandardlogo.png';
-
-          function add_picture4() {
-            ctxC4.drawImage(faCharter4, 0, 0, 60, 35);
-          }
-
-          function Clear_image4() {
-            ctxC4.clearRect(1, 1, 600, 300);
-          }
-
-          var l4 = document.getElementById("c4");
-          var cl4 = l4.getContext("2d");
-
-          function loc4(v4) {
-            switch (v4) {
-              // top: 103px; left: 210px
-              case "right":
-                l4.style.top = "103px";
-                l4.style.left = "110px";
-                l4.style.position = "absolute";
-                break;
-
-              case "left":
-                l4.style.top = "103px";
-                l4.style.left = "210px";
-                l4.style.position = "absolute";
-                break;
-
-              case "center":
-                l4.style.top = "103px";
-                l4.style.left = "167px";
-                l4.style.position = "absolute";
-                break;
-
-              case "rightarm":
-                l4.style.top = "103px";
-                l4.style.left = "70px";
-                l4.style.position = "absolute";
-                break;
-
-              case "leftarm":
-                l4.style.top = "103px";
-                l4.style.left = "255px";
-                l4.style.position = "absolute";
-                break;
-            }
-          }
-
-          //FA CHARTER SCOTTISH BADGE
-
-          var c5 = document.getElementById("c5");
-          var ctxC5 = c5.getContext("2d");
-
-          var faCharter5 = new Image();
-          faCharter5.src = 'images/fascottishc.png';
-
-          function add_picture5() {
-            ctxC5.drawImage(faCharter5, 0, 0, 60, 35);
-          }
-
-          function Clear_image5() {
-            ctxC5.clearRect(1, 1, 600, 300);
-          }
-
-          var l5 = document.getElementById("c5");
-          var cl5 = l5.getContext("2d");
-
-          function loc5(v5) {
-            switch (v5) {
-              // top: 103px; left: 210px
-              case "right":
-                l5.style.top = "103px";
-                l5.style.left = "110px";
-                l5.style.position = "absolute";
-                break;
-
-              case "left":
-                l5.style.top = "103px";
-                l5.style.left = "210px";
-                l5.style.position = "absolute";
-                break;
-
-              case "center":
-                l5.style.top = "103px";
-                l5.style.left = "167px";
-                l5.style.position = "absolute";
-                break;
-
-              case "rightarm":
-                l5.style.top = "103px";
-                l5.style.left = "70px";
-                l5.style.position = "absolute";
-                break;
-
-              case "leftarm":
-                l5.style.top = "103px";
-                l5.style.left = "255px";
-                l5.style.position = "absolute";
-                break;
-            }
-          }
-
-          //FA CHARTER WELSH BADGE
-
-          var c6 = document.getElementById("c6");
-          var ctxC6 = c6.getContext("2d");
-
-          var faCharter6 = new Image();
-          faCharter6.src = 'images/fawelshc.png';
-
-          function add_picture6() {
-            ctxC6.drawImage(faCharter6, 0, 0, 60, 35);
-          }
-
-          function Clear_image6() {
-            ctxC6.clearRect(1, 1, 600, 300);
-          }
-
-          var l6 = document.getElementById("c6");
-          var cl6 = l6.getContext("2d");
-
-          function loc6(v6) {
-            switch (v6) {
-              // top: 103px; left: 210px
-              case "right":
-                l6.style.top = "103px";
-                l6.style.left = "110px";
-                l6.style.position = "absolute";
-                break;
-
-              case "left":
-                l6.style.top = "103px";
-                l6.style.left = "210px";
-                l6.style.position = "absolute";
-                break;
-
-              case "center":
-                l6.style.top = "103px";
-                l6.style.left = "167px";
-                l6.style.position = "absolute";
-                break;
-
-              case "rightarm":
-                l6.style.top = "103px";
-                l6.style.left = "70px";
-                l6.style.position = "absolute";
-                break;
-
-              case "leftarm":
-                l6.style.top = "103px";
-                l6.style.left = "255px";
-                l6.style.position = "absolute";
-                break;
-            }
-          }
-
-          //FA CHARTER IRISH BADGE
-
-          var c7 = document.getElementById("c7");
-          var ctxC7 = c7.getContext("2d");
-
-          var faCharter7 = new Image();
-          faCharter7.src = 'images/fairishc.png';
-
-          function add_picture7() {
-            ctxC7.drawImage(faCharter7, 0, 0, 60, 35);
-          }
-
-          function Clear_image7() {
-            ctxC7.clearRect(1, 1, 600, 300);
-          }
-
-          var l7 = document.getElementById("c7");
-          var cl7 = l7.getContext("2d");
-
-          function loc7(v7) {
-            switch (v7) {
-              // top: 103px; left: 210px
-              case "right":
-                l7.style.top = "103px";
-                l7.style.left = "110px";
-                l7.style.position = "absolute";
-                break;
-
-              case "left":
-                l7.style.top = "103px";
-                l7.style.left = "210px";
-                l7.style.position = "absolute";
-                break;
-
-              case "center":
-                l7.style.top = "103px";
-                l7.style.left = "167px";
-                l7.style.position = "absolute";
-                break;
-
-              case "rightarm":
-                l7.style.top = "103px";
-                l7.style.left = "70px";
-                l7.style.position = "absolute";
-                break;
-
-              case "leftarm":
-                l7.style.top = "103px";
-                l7.style.left = "255px";
-                l7.style.position = "absolute";
-                break;
-            }
+            redrawTextsCan8();
           }
 
           //CLUB BADGE UPLOAD - myCanvas - path
@@ -1817,8 +1416,8 @@
             img = new Image();
             img.onload = function() {
 
-              var MAX_WIDTH = 50;
-              var MAX_HEIGHT = 50;
+              var MAX_WIDTH = 40;
+              var MAX_HEIGHT = 40;
               var width = img.width;
               var height = img.height;
 
@@ -1877,8 +1476,8 @@
             img = new Image();
             img.onload = function() {
 
-              var MAX_WIDTH = 50;
-              var MAX_HEIGHT = 50;
+              var MAX_WIDTH = 40;
+              var MAX_HEIGHT = 40;
               var width = img.width;
               var height = img.height;
 
@@ -1978,8 +1577,8 @@
               case "left":
                   cN2.style.width = "50px";
                   cN2.style.height = "50px";
-                  cN2.style.top = "87px";
-                  cN2.style.left = "210px";
+                  cN2.style.top = "100px";
+                  cN2.style.left = "200px";
                   cN2.style.position = "absolute";
                   break;
 
@@ -1987,14 +1586,14 @@
                   cN2.style.width = "115px";
                   cN2.style.height = "100px";
                   cN2.style.top = "140px";
-                  cN2.style.left = "137px";
+                  cN2.style.left = "133px";
                   cN2.style.position = "absolute";
                   break;
 
               case "toprear":
                   cN2.style.width = "115px";
                   cN2.style.height = "100px";
-                  cN2.style.top = "45px";
+                  cN2.style.top = "43px";
                   cN2.style.left = "515px";
                   cN2.style.position = "absolute";
                   break;
@@ -2003,11 +1602,12 @@
                   cN2.style.width = "115px";
                   cN2.style.height = "100px";
                   cN2.style.top = "210px";
-                  cN2.style.left = "515px";
+                  cN2.style.left = "517px";
                   cN2.style.position = "absolute";
                   break;
                   }
                 }
+
 
 
                 //ADDITIONAL SPONSOR LOGO UPLOAD - myCanvas4 - pathN4
@@ -2063,8 +1663,8 @@
                     case "left":
                         cN4.style.width = "50px";
                         cN4.style.height = "50px";
-                        cN4.style.top = "87px";
-                        cN4.style.left = "210px";
+                        cN4.style.top = "100px";
+                        cN4.style.left = "200px";
                         cN4.style.position = "absolute";
                         break;
 
@@ -2072,14 +1672,14 @@
                         cN4.style.width = "115px";
                         cN4.style.height = "100px";
                         cN4.style.top = "140px";
-                        cN4.style.left = "137px";
+                        cN4.style.left = "133px";
                         cN4.style.position = "absolute";
                         break;
 
                     case "toprear":
                         cN4.style.width = "115px";
                         cN4.style.height = "100px";
-                        cN4.style.top = "45px";
+                        cN4.style.top = "43px";
                         cN4.style.left = "515px";
                         cN4.style.position = "absolute";
                         break;
@@ -2088,7 +1688,7 @@
                         cN4.style.width = "115px";
                         cN4.style.height = "100px";
                         cN4.style.top = "210px";
-                        cN4.style.left = "515px";
+                        cN4.style.left = "517px";
                         cN4.style.position = "absolute";
                         break;
                         }
