@@ -1,8 +1,14 @@
 # DiscountFootballKits Customization Panel
 
-This is a panel for DiscountFootballKits where the customer can select a garment and customize it. The customer can insert text/logo on the garment and then save it as pdf or print it.
+This is a panel for DiscountFootballKits where the customer can select a garment and customize it. The customer can do the following in the panel: 
+### Insert text or upload logo on the garment
+### Change the colour and the font-family of the inserted text
+### Change the location of the logo/text
+### Change garments 
+### After customization the garments can be downloaded as PDF or printed
 
-### Running
+
+## Running
 
 For running just open the home.html file.
 
