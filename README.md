@@ -1,1 +1,1 @@
-# DiscountFootballKits Personalisation Panel
+# DiscountFootballKits Customization Panel
