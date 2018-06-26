@@ -5360,13 +5360,13 @@ Popovers, Tolltips, Toggles etc */
         padding: 20px 5
     }
 	.nav-tabs {
-	    border-left: 1px solid #e8e9ea;
 	    border-bottom: none;
+        margin: 0 0 0 -15px;
 	}
 	.nav-tabs > li {
-	    float: none;
-	    margin-bottom: 0;
-	    padding: 3px 0;
+	    float: left;
+        margin-bottom: 0;
+        padding: 1px 8px;
 	}
 	.nav-tabs > li.separator {
 		border-bottom:1px solid #e8e9ea;
@@ -5401,6 +5401,8 @@ Popovers, Tolltips, Toggles etc */
 	    border-left: 2px solid rgb(252,200,19);
 	}
 }
+
+
 
 
 /* Owl Slider config */
@@ -6556,6 +6558,36 @@ button.mfp-arrow {
     color: #fff;
     
 }
+
+@media (max-width:767px) {
+    .social-icon {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (max-width:991px) {
+    .social-icon {
+        padding-top: 40px;
+        margin: 0px 0px 14px -23px;
+    }
+}
+@media (min-width:992px) {
+    .social-icon {
+        padding-top: 20px;
+        padding-right: 0px;
+        padding-left: 680px;
+    }
+}
+
+@media (min-width:1199px) {
+    .social-icon {
+        padding-top: 20px;
+        padding-right: 0px;
+        padding-left: 882px;
+    }
+}
+
+
 .social-icon.circle .icon {
     border-radius: 50%;
 }
