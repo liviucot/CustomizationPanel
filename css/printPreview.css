@@ -1,0 +1,82 @@
+/* -------------------------------------------------------------------
+
+  [Description]
+
+  - This is for Print Preview option where it displays the #tshirt div,
+  some text and the Vesey Logo in the top right side.
+
+
+-------------------------------------------------------------------- */
+
+
+.printonly{
+  display: none;
+}
+
+.emptySpace{
+  display: none;
+}
+
+.textonly{
+  display: none;
+}
+
+@media print{
+
+  body *{
+      visibility: hidden;
+  }
+
+  @page{
+    size: auto;
+    margin: 0;
+  }
+
+  .printonly{
+    display: block;
+    position: absolute;
+    width: 34%;
+    top: 0;
+    right: 0;
+  }
+
+  .emptySpace{
+    display: block;
+    width: 100%;
+    height: 100px;
+    top: 10px;
+  }
+
+  .textonly{
+    display: block;
+    position: absolute;
+    width: 34%;
+    top: 0;
+    left: 100px;
+  }
+
+  #tshirts, #tshirts *{
+      visibility: visible;
+      border: none;
+  }
+
+  #tshirts {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    float: left;
+    border: none;
+  }
+
+  #second{
+    display: inline-block;
+    padding-left: 390px;
+    bottom: 10px;
+    
+  }
+
+  #first{
+    position: absolute;
+  }
+
+}

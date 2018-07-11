@@ -1,3 +1,17 @@
+/* -------------------------------------------------------------------
+
+  [Table of contents]
+
+  01. Canvas Properties
+  02. Color Boxes
+  03. Upload Box
+  04. Fonts
+
+
+-------------------------------------------------------------------- */
+
+/* *********************  Canvas Properties ********************* */
+
 #myCanvas{border:2px dotted transparent;
 border-radius: 5px;
 }
@@ -55,6 +69,8 @@ border-radius: 5px;}
 border-radius: 5px;}
 
 #measure { position: absolute; left: -10000px; top:10px;}
+
+/* *********************  Color Boxes for changing color of the numbers/text/etc ********************* */
 
 .green {
 border: 0.1px solid #CCC; 
@@ -350,6 +366,8 @@ content: transparent;
 
 }
 
+/* *********************  Upload Box ********************* */
+
 .file-upload {
 background-color: #ffffff;
 width: 255px;
@@ -405,6 +423,8 @@ padding: 17px 0;
 line-height: 22px;
 text-align: center;
 }
+
+/* *********************  Fonts ********************* */
 
 .Arial{font-family:"Arial";}
 .Helvetica{font-family:"Helvetica";}

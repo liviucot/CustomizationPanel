@@ -22,8 +22,8 @@
   <link rel="stylesheet" href="css/main.css">
   <!-- ==== COLORS FOR THE ELEMENTS AND TRANSPARENCY OF CANVASES ==== -->
   <link rel="stylesheet" href="css/canvasSettings.css">
-  <!-- ================= CHANGING GARMENTS COLORS ================= -->
-  <link rel="stylesheet" type="text/css" href="css/changeGarments.css">
+  <!-- ================= PRINT PREVIEW CSS ================= -->
+  <link rel="stylesheet" type="text/css" href="css/printPreview.css">
 
 </head>
 
@@ -35,7 +35,7 @@
         <a class="brand" href="home.html">Personalisation Panel</a>
       </div>
     </div>
-  </div>
+  </div>  
 
   <div class="container">
     <section id="typography">
@@ -117,7 +117,7 @@
                             <!----- =================== TAB 1.2 - OFFICIAL NIKE NUMBERS ================= -->
                             <h3 style="font-size: 15px;padding-top: 15px">Specify Number</h3>
                             <input id="sourceText8" maxlength="2" type="text" style="height: 32px;width: 223px;">
-                            <h3 style="font-size: 15px;padding-top: 10px">Choose Location</h3>
+                             <h3 style="font-size: 15px;padding-top: 10px">Choose Location</h3>
 
                             <div style="padding: 2px; margin-top: 0px;">
                               <div style="padding-bottom: 20px; padding-right: 20px">
@@ -1187,12 +1187,27 @@
           </div>
           <!----- ============= ID="TSHIRTS" FOR PRINTING THE TSHIRTS ============ -->
           <div class="span8" id="tshirts">
+            <div class="printonly">
+              <img src="images/vesey.png" id="printlogo">
+            </div>
+
+            <div class="textonly">
+              <h id="textprint">Tel: 0000 000 0000 <bR> Email: test@testingprint.co.uk
+              <br>Web: https://discountfootballkits.com</h>
+            </div>
+
+            <div class="emptySpace">
+              <br><br><br><br><br>
+            </div>
             <div align="center" style="min-height: 32px;">
               <div class="clearfix">
                 <div class="btn-group inline pull-left" id="texteditors" style="display:none"></div>
                 <div class="pull-right" align="" id="imageeditor" style="display:none"></div>
               </div>
             </div>
+
+            
+
             <!-- ============= THE TSHIRTS BOX WITH CANVASES INSIDE ============== -->
             <div class="span9 well admin-menu" id="1">
               <br>
